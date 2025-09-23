@@ -1,0 +1,1 @@
+export { TradePage } from './trade'

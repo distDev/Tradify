@@ -1,4 +1,5 @@
 import { RouterProvider } from '@tanstack/react-router'
+import { TonConnectUIProvider } from '@tonconnect/ui-react'
 
 import { StrictMode } from 'react'
 import ReactDOM from 'react-dom/client'
@@ -13,8 +14,10 @@ if (rootElement && !rootElement.innerHTML) {
   const root = ReactDOM.createRoot(rootElement)
   root.render(
     <StrictMode>
-      <RouterProvider router={router} />
-    </StrictMode>,
+      <TonConnectUIProvider manifestUrl='https://<YOUR_APP_URL>/tonconnect-manifest.json'>
+        <RouterProvider router={router} />
+      </TonConnectUIProvider>
+    </StrictMode>
   )
 }
 

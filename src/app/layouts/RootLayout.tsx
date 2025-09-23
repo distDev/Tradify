@@ -1,16 +1,19 @@
+import { BottomNav, Header } from '@/widgets'
+
 interface RootLayoutProps {
   children: React.ReactNode
 }
 
 function RootLayout({ children }: RootLayoutProps) {
   return (
-    <div className="flex flex-col bg-gray-50 min-h-[100vh]">
-      {/* Шапка */}
+    <div className="flex flex-col max-w-[428px] bg-[#141414]">
+      <Header />
 
-      {/* Основной контент */}
-      <main className="min-w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 min-h-100vh">
+      <main className="min-w-full mx-auto px-[15px] min-h-[100vh] bg-red">
         {children}
       </main>
+
+      <BottomNav />
     </div>
   )
 }

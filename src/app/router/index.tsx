@@ -1,6 +1,4 @@
-import {
-  createRouter,
-} from '@tanstack/react-router'
+import { createRouter } from '@tanstack/react-router'
 
 import { rootRoute } from './root'
 import { indexRoute } from './routes'
