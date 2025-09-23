@@ -16,6 +16,7 @@ export default antfu({
     'tsconfig*.json',
   ],
 }, {
+  ignores: ['vite.config.ts'],
   plugins: {
     'simple-import-sort': simpleImportSort,
   },

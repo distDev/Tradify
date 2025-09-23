@@ -1,5 +1,3 @@
-import { Link } from '@tanstack/react-router'
-
 interface RootLayoutProps {
   children: React.ReactNode
 }
