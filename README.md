@@ -2,18 +2,8 @@
 
 Стек: React, TypeScript, Zustand, Shadcn, Tailwind, Tanstack Router, Vite, Vitest, StoryBook
 
-<div align="left" style="margin-bottom: 12px;">
-  <p style="margin-bottom: 8px;"><strong>Страница с трейдами (альфа)</strong></p>
-  <img src="https://github.com/user-attachments/assets/497aa88f-c19c-4320-a008-cd43cc9d08bc" width="400" />
-</div>
+<img src="https://github.com/user-attachments/assets/ed064e20-ac8e-4a3c-adf0-44c7c55d222a" />
 
-<div align="left" style="margin-bottom: 12px;">
-  <p style="margin-bottom: 8px;"><strong>Страница активного трейда</strong></p>
-  <img src="https://github.com/user-attachments/assets/16c4ceb8-5193-4965-ac63-510e43396305" width="400" />
-</div>
+<img src="https://github.com/user-attachments/assets/6e9d833c-f853-4ae6-9f67-c820082869e1" />
 
-<div align="left">
-  <p style="margin-bottom: 8px;"><strong>Страница офферов</strong></p>
-  <img src="https://github.com/user-attachments/assets/ff8873d4-835d-474d-bcf8-f81dc056fce6" width="400" />
-</div>
 
