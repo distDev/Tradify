@@ -1,0 +1,139 @@
+Index: src/shared/ui/ui-select-with-modal/UISelectWithModal.tsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/shared/ui/ui-select-with-modal/UISelectWithModal.tsx b/src/shared/ui/ui-select-with-modal/UISelectWithModal.tsx
+new file mode 100644
+--- /dev/null	(date 1761074576738)
++++ b/src/shared/ui/ui-select-with-modal/UISelectWithModal.tsx	(date 1761074576738)
+@@ -0,0 +1,66 @@
++'use client'
++
++import * as React from 'react'
++
++import { cn } from '@/lib/utils'
++import {
++  Drawer,
++  DrawerContent,
++  DrawerHeader,
++  DrawerTitle,
++  DrawerTrigger,
++} from '@/shared/ui/shadcn/drawer'
++import { UIButton } from '@/shared/ui/ui-button'
++
++interface SelectWithModalProps {
++  title?: string // Заголовок в модалке
++  placeholder?: string // Placeholder, если ничего не выбрано
++  value?: string | React.ReactNode // Отображаемое значение в триггере
++  onOpenChange?: (open: boolean) => void // Коллбек при открытии/закрытии
++  children?: React.ReactNode // Контент модалки
++  className?: string
++  disabled?: boolean
++}
++
++export function UISelectWithModal({
++  title,
++  placeholder = 'Select...',
++  value,
++  onOpenChange,
++  children,
++  className,
++  disabled,
++}: SelectWithModalProps) {
++  const [open, setOpen] = React.useState(false)
++
++  const handleOpenChange = (state: boolean) => {
++    setOpen(state)
++    onOpenChange?.(state)
++  }
++
++  return (
++    <Drawer open={open} onOpenChange={handleOpenChange}>
++      <DrawerTrigger asChild>
++        <UIButton
++          variant="outline"
++          className={cn('w-full justify-between', className)}
++          disabled={disabled}
++        >
++          {value || (
++            <span className="text-muted-foreground">{placeholder}</span>
++          )}
++        </UIButton>
++      </DrawerTrigger>
++
++      <DrawerContent className="h-[80vh] rounded-t-2xl p-0 flex flex-col">
++        {title && (
++          <DrawerHeader className="border-b p-4">
++            <DrawerTitle>{title}</DrawerTitle>
++          </DrawerHeader>
++        )}
++
++        <div className="flex-1 overflow-y-auto">{children}</div>
++      </DrawerContent>
++    </Drawer>
++  )
++}
+Index: src/pages/trade/ui/Filters.tsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import { UISelect, UITabs } from '@/shared'\n\nexport function Filters() {\n  const tabs = [\n    {\n      value: 'one',\n      label: 'Получено',\n      content: <><h2>Полученое 1</h2></>,\n    },\n    {\n      value: 'second',\n      label: 'Размещено',\n      content: <><h2>Размещено 1</h2></>,\n    },\n  ]\n\n  return (\n    <div className=\"flex gap-1.5 flex-col\">\n      <div className=\"flex gap-2\">\n        <UISelect\n          placeholder=\"Выберите фрукт\"\n          label=\"Фрукты\"\n\n          options={[\n            { value: 'apple', label: 'Apple' },\n            { value: 'banana', label: 'Banana' },\n            { value: 'grapes', label: 'Grapes' },\n          ]}\n        />\n\n        <UISelect\n          placeholder=\"Выберите фрукт\"\n          label=\"Фрукты\"\n\n          options={[\n            { value: 'apple', label: 'Apple' },\n            { value: 'banana', label: 'Banana' },\n            { value: 'grapes', label: 'Grapes' },\n          ]}\n        />\n      </div>\n\n      <UITabs tabs={tabs} />\n    </div>\n  )\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/pages/trade/ui/Filters.tsx b/src/pages/trade/ui/Filters.tsx
+--- a/src/pages/trade/ui/Filters.tsx	(revision d6c4872c875a69947a34366bd3c1c3a6249debd1)
++++ b/src/pages/trade/ui/Filters.tsx	(date 1761074576741)
+@@ -1,4 +1,4 @@
+-import { UISelect, UITabs } from '@/shared'
++import { UISelect, UISelectWithModal, UITabs } from '@/shared'
+ 
+ export function Filters() {
+   const tabs = [
+@@ -17,16 +17,9 @@
+   return (
+     <div className="flex gap-1.5 flex-col">
+       <div className="flex gap-2">
+-        <UISelect
+-          placeholder="Выберите фрукт"
+-          label="Фрукты"
+-
+-          options={[
+-            { value: 'apple', label: 'Apple' },
+-            { value: 'banana', label: 'Banana' },
+-            { value: 'grapes', label: 'Grapes' },
+-          ]}
+-        />
++        <UISelectWithModal>
++          
++        </UISelectWithModal>
+ 
+         <UISelect
+           placeholder="Выберите фрукт"
+Index: src/shared/ui/ui-select-with-modal/index.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/shared/ui/ui-select-with-modal/index.ts b/src/shared/ui/ui-select-with-modal/index.ts
+new file mode 100644
+--- /dev/null	(date 1761074546105)
++++ b/src/shared/ui/ui-select-with-modal/index.ts	(date 1761074546105)
+@@ -0,0 +1,1 @@
++export { UISelectWithModal } from './UISelectWithModal'
+Index: src/shared/index.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>export { UIButton } from './ui/ui-button'\nexport { UIInput } from './ui/ui-input'\nexport { UISelect } from './ui/ui-select'\nexport { UITabs } from './ui/ui-tabs'\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/shared/index.ts b/src/shared/index.ts
+--- a/src/shared/index.ts	(revision d6c4872c875a69947a34366bd3c1c3a6249debd1)
++++ b/src/shared/index.ts	(date 1761074529220)
+@@ -1,4 +1,5 @@
+ export { UIButton } from './ui/ui-button'
+ export { UIInput } from './ui/ui-input'
+ export { UISelect } from './ui/ui-select'
++export { UISelectWithModal } from './ui/ui-select-with-modal'
+ export { UITabs } from './ui/ui-tabs'
