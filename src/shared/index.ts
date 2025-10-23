@@ -1,4 +1,5 @@
 export { UIButton } from './ui/ui-button'
 export { UIInput } from './ui/ui-input'
 export { UISelect } from './ui/ui-select'
+export { UISelectWithModal } from './ui/ui-select-with-modal'
 export { UITabs } from './ui/ui-tabs'
