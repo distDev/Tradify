@@ -1,0 +1,1 @@
+export { UIAccordionItem } from './UIAccordionItem'
