@@ -1,9 +1,10 @@
-import { Filters } from './Filters'
+import { FiltersPanel } from '@/features'
 
 export function TradePage() {
   return (
-    <div className='text-white p-2'>
-      <Filters />
+    <div className="flex flex-col text-white">
+      <FiltersPanel />
     </div>
+
   )
 }

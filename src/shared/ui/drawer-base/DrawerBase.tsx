@@ -14,6 +14,7 @@ import { UIButton } from '../ui-button'
 interface DrawerBaseProps {
   drawerTitle: string
   open?: boolean
+  variant?: 'light' | 'dark'
   children?: React.ReactNode
   footerContent?: React.ReactNode
   triggerContent?: React.ReactNode
@@ -31,6 +32,7 @@ interface DrawerBaseProps {
 export function DrawerBase({
   drawerTitle,
   open,
+  variant,
   triggerContent,
   children,
 
@@ -60,7 +62,7 @@ export function DrawerBase({
         {triggerContent}
       </DrawerTrigger>
 
-      <DrawerContent className="min-h-[90vh] rounded-t-2xl p-0 flex flex-col px-5 py-4">
+      <DrawerContent className="min-h-[90vh] rounded-t-2xl p-0 flex flex-col px-5 py-4" variant={variant}>
         <DrawerHeader className="p-4">
           <DrawerTitle className="text-white">{drawerTitle}</DrawerTitle>
         </DrawerHeader>
