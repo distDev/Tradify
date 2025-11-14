@@ -5,10 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f67f5c98-cbc3-49c6-8d50-ed056e874d9f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/shared/ui/ui-select-with-modal/UISelectWithModal.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/ui/ui-select-with-modal/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/trade/ui/Filters.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/trade/ui/Filters.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/assets/fonts/Inter/Inter-VariableFont_opsz,wght.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/assets/fonts/Inter/OFL.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/assets/fonts/Inter/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/ui/shadcn/dialog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_21_10_2025,_22_27_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/ui_select.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/ui_select.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/filters/ui/FilterSort.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/filters/ui/FilterSort.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/filters/ui/FiltersPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/filters/ui/FiltersPanel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/ui/drawer-base/DrawerBase.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/ui/drawer-base/DrawerBase.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/ui/shadcn/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/ui/shadcn/button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/ui/shadcn/drawer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/ui/shadcn/drawer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/ui/shadcn/input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/ui/shadcn/input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/ui/shadcn/radio-group.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/ui/shadcn/radio-group.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/ui/shadcn/select.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/ui/shadcn/select.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/ui/shadcn/tabs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/ui/shadcn/tabs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/ui/ui-accordion-item/UIAccordionItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/ui/ui-accordion-item/UIAccordionItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stories/RadioGroup.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/stories/RadioGroup.stories.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +63,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "features/1193764-create-select-with-modal",
+    "git-widget-placeholder": "features/1217851-variables-setup",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -79,6 +93,7 @@
       <workItem from="1756803912066" duration="406000" />
       <workItem from="1757360212409" duration="9000" />
       <workItem from="1761074672351" duration="224000" />
+      <workItem from="1763108556290" duration="335000" />
     </task>
     <servers />
   </component>
@@ -87,6 +102,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ui select" />
-    <option name="LAST_COMMIT_MESSAGE" value="ui select" />
+    <MESSAGE value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="1" />
   </component>
 </project>

@@ -1,3 +1,5 @@
+import { X } from 'lucide-react'
+
 import { useState } from 'react'
 
 import {
@@ -62,9 +64,17 @@ export function DrawerBase({
         {triggerContent}
       </DrawerTrigger>
 
-      <DrawerContent className="min-h-[90vh] rounded-t-2xl p-0 flex flex-col px-5 py-4" variant={variant}>
-        <DrawerHeader className="p-4">
-          <DrawerTitle className="text-white">{drawerTitle}</DrawerTitle>
+      <DrawerContent className="min-h-[95vh] rounded-t-2xl p-0 flex flex-col px-5 py-4" variant={variant}>
+        <DrawerHeader className="w-full flex justify-between">
+          <DrawerTitle className="text-white text-[28px] font-bold">{drawerTitle}</DrawerTitle>
+
+          <button
+            type="button"
+            className="bg-accent/80 w-[37px] h-[37px] rounded-full text-[#e5e5ea] flex justify-center items-center"
+            onClick={() => handleChange(false)}
+          >
+            <X className="h-[24px] w-[24px]" />
+          </button>
         </DrawerHeader>
 
         <div className="flex-1 overflow-y-auto">
@@ -72,10 +82,10 @@ export function DrawerBase({
         </div>
 
         <DrawerFooter className="w-full flex flex-row gap-1">
-
           {showSubmitButton && (
             <UIButton className="flex-1" onClick={onSubmit}>{submitButtonText}</UIButton>
           )}
+
           {showClearButton && (
             <UIButton className="flex-1" onClick={onClear}>{clearButtonText}</UIButton>
           )}

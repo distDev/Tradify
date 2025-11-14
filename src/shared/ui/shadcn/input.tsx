@@ -26,8 +26,8 @@ const inputVariants = cva(
   {
     variants: {
       variant: {
-        default: 'bg-[#272727] text-white',
-        light: 'bg-[#313134] text-white',
+        default: 'bg-secondary text-white',
+        light: 'bg-accent text-white',
       },
     },
     defaultVariants: {

@@ -3,39 +3,71 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: "Inter";
+  src: url("../shared/assets/fonts/Inter/Inter-VariableFont.woff2") format("woff2-variations"),
+       url("../shared/assets/fonts/Inter/Inter-VariableFont.woff2") format("woff2");
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+  font-display: swap;
+}
 :root {
-  --radius: 0.65rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.141 0.005 285.823);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.141 0.005 285.823);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.141 0.005 285.823);
-  --primary: oklch(0.623 0.214 259.815);
-  --primary-foreground: oklch(0.97 0.014 254.604);
-  --secondary: oklch(0.967 0.001 286.375);
-  --secondary-foreground: oklch(0.21 0.006 285.885);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.21 0.006 285.885);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.623 0.214 259.815);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-primary: oklch(0.623 0.214 259.815);
-  --sidebar-primary-foreground: oklch(0.97 0.014 254.604);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
+/* ===== Цвет фона ===== */
+--background: #141414; /* основной фон */
+--primary: #0A89FA;  /* брендовый фон */
+--secondary: #272727; /* второстепенный фон */
+--accent: #3A3A3A; /* второстепенный светлый фон */
+--destructive: oklch(0.577 0.245 27.325); /* фон ошибки */
+
+/* ===== Цвет текст ===== */
+--foreground: #FFFFFF; /* основной текст */
+--primary-foreground: #0A89FA; /* брендовый текст */
+--secondary-foreground: #848484 /* второстепенный текст */
+--accent-foreground: #848484;  /* второстепенный текст */
+
+/* ===== Размер строки ===== */
+--font-size-xs: 12px; /* мелкий текст, подписи */
+--font-size-sm: 14px; /* базовый текст */
+--font-size-md: 16px; /* немного крупнее — удобно для UI */
+--font-size-lg: 18px; /* заголовки / важные элементы */
+--font-size-xl: 28px; /* крупные заголовки / карточки */
+--font-size-2xl: 32px; /* хедеры страниц */
+
+/* ===== Высота строки ===== */
+--line-height-xs: 1.2;
+--line-height-sm: 1.4;
+--line-height-md: 1.5;
+--line-height-lg: 1.6;
+
+/* ===== Вес шрифтов ===== */
+--font-weight-normal: 400;
+--font-weight-medium: 500;
+--font-weight-semibold: 600;
+--font-weight-bold: 700;
+
+--border: #3A3A3A;
+--input: #272727;
+--ring: oklch(0.623 0.214 259.815);
+--muted: #3A3A3A;
+--muted-foreground: #848484;
+--card: #272727; /* Цвет фона карточек */
+--card-foreground: #FFFFFF; /* Цвет  карточек */
+--popover: #272727;
+--popover-foreground: #FFFFFF;
+--radius: 0.65rem;
+--chart-1: oklch(0.646 0.222 41.116);
+--chart-2: oklch(0.6 0.118 184.704);
+--chart-3: oklch(0.398 0.07 227.392);
+--chart-4: oklch(0.828 0.189 84.429);
+--chart-5: oklch(0.769 0.188 70.08);
+--sidebar: oklch(0.985 0 0);
+--sidebar-foreground: oklch(0.141 0.005 285.823);
+--sidebar-primary: oklch(0.623 0.214 259.815);
+--sidebar-primary-foreground: oklch(0.97 0.014 254.604);
+--sidebar-accent: #3A3A3A;
+--sidebar-accent-foreground: #848484;
+--sidebar-border: oklch(0.92 0.004 286.32);
+--sidebar-ring: oklch(0.623 0.214 259.815);
 }
 
 .dark {
@@ -152,5 +184,6 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: "Inter", sans-serif;
   }
 }

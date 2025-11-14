@@ -43,7 +43,7 @@ export const Default: Story = {
     defaultValue: 'comfortable',
   },
   render: (args) => (
-    <div className="text-white bg-[#272727] p-6 rounded-md">
+    <div className="text-white bg-secondary p-6 rounded-md">
       <RadioGroup {...args}>
         {options.map((option) => (
           <div key={option.value} className="flex items-center gap-3">
@@ -60,7 +60,7 @@ export const Default: Story = {
 
 export const NoDefaultValue: Story = {
   render: (args) => (
-    <div className="text-white bg-[#272727] p-6 rounded-md">
+    <div className="text-white bg-secondary p-6 rounded-md">
       <RadioGroup {...args}>
         {options.map((option) => (
           <div key={option.value} className="flex items-center gap-3">
@@ -80,7 +80,7 @@ export const WithDisabled: Story = {
     defaultValue: 'comfortable',
   },
   render: (args) => (
-    <div className="text-white bg-[#272727] p-6 rounded-md">
+    <div className="text-white bg-secondary p-6 rounded-md">
       <RadioGroup {...args}>
         {options.map((option, index) => (
           <div key={option.value} className="flex items-center gap-3">
@@ -107,7 +107,7 @@ export const SingleItem: Story = {
     defaultValue: 'single',
   },
   render: (args) => (
-    <div className="text-white bg-[#272727] p-6 rounded-md">
+    <div className="text-white bg-secondary p-6 rounded-md">
       <RadioGroup {...args}>
         <div className="flex items-center gap-3">
           <RadioGroupItem value="single" id="r-single" />
@@ -125,7 +125,7 @@ export const ManyOptions: Story = {
     defaultValue: 'option-5',
   },
   render: (args) => (
-    <div className="text-white bg-[#272727] p-6 rounded-md">
+    <div className="text-white bg-secondary p-6 rounded-md">
       <RadioGroup {...args}>
         {Array.from({ length: 10 }, (_, i) => {
           const value = `option-${i + 1}`
@@ -149,7 +149,7 @@ export const CustomGap: Story = {
     className: 'gap-6',
   },
   render: (args) => (
-    <div className="text-white bg-[#272727] p-6 rounded-md">
+    <div className="text-white bg-secondary p-6 rounded-md">
       <RadioGroup {...args}>
         {options.map((option) => (
           <div key={option.value} className="flex items-center gap-3">

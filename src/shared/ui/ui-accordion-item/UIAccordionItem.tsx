@@ -11,7 +11,7 @@ const accordionItemVariants = cva(
   {
     variants: {
       variant: {
-        default: 'bg-[#272727]',
+        default: 'bg-secondary',
       },
     },
     defaultVariants: {
@@ -41,7 +41,7 @@ const accordionContentVariants = cva(
   {
     variants: {
       variant: {
-        default: 'bg-[#272727] py-2',
+        default: 'bg-secondary py-2',
       },
     },
     defaultVariants: {
