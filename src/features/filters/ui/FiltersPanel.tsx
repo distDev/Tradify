@@ -1,4 +1,4 @@
-import { ArrowDownUp, Settings2 } from 'lucide-react'
+import { Settings2 } from 'lucide-react'
 
 import { FilterListWithSearch } from '@/features'
 import { UIButtonWithDrawer, UIInput, UISelectWithDrawer } from '@/shared'
@@ -17,14 +17,7 @@ export function FiltersPanel({}) {
           placeholder="Название или описание"
         />
 
-        <UIButtonWithDrawer
-          className="w-[40px] h-[40px]"
-          buttonVariant="secondary"
-          drawerTitle="Сортировка"
-          icon={<ArrowDownUp />}
-        >
-          <FilterSort />
-        </UIButtonWithDrawer>
+        <FilterSort />
       </div>
 
       <div className="flex space-x-2.5">
