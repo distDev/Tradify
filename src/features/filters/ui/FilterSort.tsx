@@ -1,6 +1,6 @@
 import { ArrowDownUp } from 'lucide-react'
 
-import { UIButton } from '@/shared'
+import { UIButton } from '@/shared/ui'
 import { Dialog, DialogContent, DialogTrigger } from '@/shared/ui/shadcn/dialog'
 import { RadioGroup, RadioGroupItem } from '@/shared/ui/shadcn/radio-group'
 

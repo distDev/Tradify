@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 
-import { DrawerBase, UIButton } from '@/shared'
+import { DrawerBase, UIButton } from '@/shared/ui'
 
 type DrawerVariant = 'light' | 'dark'
 

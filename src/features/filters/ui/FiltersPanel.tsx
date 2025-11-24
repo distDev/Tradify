@@ -1,7 +1,7 @@
 import { Settings2 } from 'lucide-react'
 
 import { FilterListWithSearch } from '@/features'
-import { UIButtonWithDrawer, UIInput, UISelectWithDrawer } from '@/shared'
+import { UIButtonWithDrawer, UIInput, UISelectWithDrawer } from '@/shared/ui'
 
 import { AllFilters } from './AllFilters'
 import { FilterSort } from './FilterSort'

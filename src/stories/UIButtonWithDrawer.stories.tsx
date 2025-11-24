@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { useState } from 'react'
 import { Filter, SlidersHorizontal, Settings, Search, Menu } from 'lucide-react'
 
-import { UIButtonWithDrawer } from '@/shared'
+import { UIButtonWithDrawer, UIInput } from '@/shared/ui'
 import {
   Accordion,
   AccordionContent,
@@ -10,7 +10,6 @@ import {
   AccordionTrigger,
 } from '@/shared/ui/shadcn/accordion'
 import { UICheckbox } from '@/shared/ui/ui-checkbox'
-import { UIInput } from '@/shared'
 
 const meta = {
   title: 'Shared/UIButtonWithDrawer',

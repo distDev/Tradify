@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { UITabs } from '@/shared'
+import { UITabs } from '@/shared/ui'
 
 const meta = {
   title: 'Shared/UITabs',
