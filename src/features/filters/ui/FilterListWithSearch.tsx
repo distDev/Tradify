@@ -1,4 +1,4 @@
-import { UICheckbox, UIInput } from '@/shared'
+import { UICheckbox, UIInput } from '@/shared/ui'
 
 interface FilterListWithSearchProps {}
 

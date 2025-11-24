@@ -1,7 +1,7 @@
 import { useTonConnectUI } from '@tonconnect/ui-react'
 import { WalletMinimal } from 'lucide-react'
 
-import { UIButton } from '@/shared'
+import { UIButton } from '@/shared/ui'
 
 export function Header() {
   const [tonConnectUI] = useTonConnectUI()

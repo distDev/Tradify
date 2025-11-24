@@ -1,0 +1,1 @@
+export { useDominantColor } from './useDominantColor'

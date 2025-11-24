@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { useState } from 'react'
 
-import { UISelectWithDrawer } from '@/shared'
+import { UISelectWithDrawer } from '@/shared/ui'
 import {
   Accordion,
   AccordionContent,

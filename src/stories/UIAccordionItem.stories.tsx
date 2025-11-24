@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { Accordion } from '@/shared/ui/shadcn/accordion'
-import { UIAccordionItem, UICheckbox, UIInput } from '@/shared'
+import { UIAccordionItem, UICheckbox, UIInput } from '@/shared/ui'
 
 const meta = {
   title: 'Shared/UIAccordionItem',

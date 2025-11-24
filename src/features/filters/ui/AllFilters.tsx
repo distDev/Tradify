@@ -1,5 +1,5 @@
 import { FilterListWithSearch } from '@/features'
-import { UIAccordionItem } from '@/shared'
+import { UIAccordionItem } from '@/shared/ui'
 import { Accordion } from '@/shared/ui/shadcn/accordion'
 
 interface AllFiltersProps {}

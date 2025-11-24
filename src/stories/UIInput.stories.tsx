@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { SearchIcon } from 'lucide-react';
 
-import { UIInput } from '@/shared';
+import { UIInput } from '@/shared/ui';
 
 const meta = {
   title: 'Shared/UIInput',

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { UICheckbox } from '@/shared'
+import { UICheckbox } from '@/shared/ui'
 
 const meta = {
   title: 'Shared/UICheckbox',
