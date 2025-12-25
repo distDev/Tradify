@@ -1,4 +1,4 @@
-import { Trader } from '@/entities'
+import { InfoTag, Trader } from '@/entities'
 import { ExchangeActionsMenu, ToggleFavorite } from '@/features'
 
 interface ExchangeCardHeaderProps {}
@@ -26,10 +26,6 @@ export function ExchangeCardHeader({}: ExchangeCardHeaderProps) {
           <ExchangeActionsMenu />
         </div>
       </div>
-
-      {/* <div>
-        <p>Теги</p>
-      </div> */}
     </div>
   )
 }

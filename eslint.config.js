@@ -1,6 +1,4 @@
 import antfu from '@antfu/eslint-config'
-//  @ts-check
-import simpleImportSort from 'eslint-plugin-simple-import-sort'
 
 export default antfu(
   {
@@ -19,25 +17,26 @@ export default antfu(
     ],
   },
   {
-    ignores: ['vite.config.ts'],
-    plugins: {
-      'simple-import-sort': simpleImportSort,
-    },
     rules: {
-      'simple-import-sort/imports': [
+      'perfectionist/sort-imports': [
         'error',
         {
           groups: [
-            ['^@?\\w'], // npm (включая scoped)
-            ['^react', '^react-dom', '^next'], // React
-            ['^@/'], // алиасы
-            ['^\\u0000'], // side-effect импорты
-            ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'], // относительные
-            ['^.+\\.s?css$'], // стили
+            'type', // все type imports
+            ['parent-type', 'sibling-type', 'index-type', 'internal-type'], // type imports по типам
+            'builtin', // встроенные модули
+            'external', // внешние пакеты
+            'internal', // внутренние (алиасы @/)
+            ['parent', 'sibling', 'index'], // относительные импорты
+            'side-effect', // side-effect импорты
+            'object', // object imports
+            'unknown', // неизвестные
           ],
+          order: 'asc',
+          type: 'natural',
+          newlinesBetween: 'always', // добавлять пустые строки между группами
         },
       ],
-      'simple-import-sort/exports': 'error',
     },
-  }
+  },
 )
