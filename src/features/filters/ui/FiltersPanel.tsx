@@ -6,8 +6,6 @@ import { UIButtonWithDrawer, UIInput, UISelectWithDrawer } from '@/shared/ui'
 import { AllFilters } from './AllFilters'
 import { FilterSort } from './FilterSort'
 
-interface FiltersPanelProps {}
-
 export function FiltersPanel({}) {
   return (
     <div className="flex flex-col space-y-2.5">

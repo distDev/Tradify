@@ -1,6 +1,5 @@
 //  @ts-expect-error small library
 import ColorThief from 'colorthief'
-
 import { useEffect, useState } from 'react'
 
 export function useDominantColor(imageUrl: string): { color: string | null } {

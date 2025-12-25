@@ -1,9 +1,9 @@
-import { ArrowDown, ArrowUp, Gift } from 'lucide-react'
-
+import { Gift } from 'lucide-react'
 import { useState } from 'react'
 
 import { cn } from '@/lib/utils'
 
+import { EXCHANGE_TYPE_MAP } from '../model/map'
 import { ExchangeCardGiftsList } from './ExchangeCardGiftsList'
 import { ExchangeCardToggleGiftsButton } from './ExchangeCardToggleGiftsButton'
 
@@ -16,23 +16,10 @@ interface GiftsBlockProps {
   exchangeType: 'arrive' | 'send'
 }
 
-const exchangeTypeMap = {
-  arrive: {
-    label: 'Вы получите',
-    icon: <ArrowUp className="text-green-400" height={16} width={16} />,
-    iconBg: 'bg-green-400/30',
-  },
-  send: {
-    label: 'Вы отдадите',
-    icon: <ArrowDown className="text-red-400" height={16} width={16} />,
-    iconBg: 'bg-red-400/30',
-  },
-} as const
-
 export function ExchangeCardGiftsBlock({ gifts, exchangeType }: GiftsBlockProps) {
   const [expanded, setExpanded] = useState(false)
 
-  const { label, icon, iconBg } = exchangeTypeMap[exchangeType]
+  const { label, icon, iconBg } = EXCHANGE_TYPE_MAP[exchangeType]
 
   const visible = expanded ? gifts : gifts.slice(0, 3)
   const hiddenCount = gifts.length - visible.length
