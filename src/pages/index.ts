@@ -1,1 +1,5 @@
+export { InventoryPage } from './inventory'
+export { InventoryExchangesPage } from './inventory-exchanges'
+export { InventoryGiftsPage } from './inventory-gifts'
+export { InventoryHistoryPage } from './inventory-history'
 export { TradePage } from './trade'

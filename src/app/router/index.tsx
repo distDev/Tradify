@@ -1,9 +1,13 @@
 import { createRouter } from '@tanstack/react-router'
 
 import { rootRoute } from './root'
-import { indexRoute } from './routes'
+import { indexRoute, inventoryExchangesRoute, inventoryGiftsRoute, inventoryHistoryRoute, inventoryRoute } from './routes'
 
-const routeTree = rootRoute.addChildren([indexRoute])
+const routeTree = rootRoute.addChildren([
+  indexRoute,
+
+  inventoryRoute.addChildren([inventoryGiftsRoute, inventoryExchangesRoute, inventoryHistoryRoute]),
+])
 
 export const router = createRouter({
   routeTree,
