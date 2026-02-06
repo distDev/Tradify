@@ -12,7 +12,7 @@ export function BottomNav() {
           </Link>
         </li>
         <li>
-          <Link to="/" className="flex flex-col gap-1 items-center">
+          <Link to="/inventory" className="flex flex-col gap-1 items-center">
             <Gift />
             <span>My gifts</span>
           </Link>

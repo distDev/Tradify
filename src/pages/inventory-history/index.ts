@@ -1,0 +1,1 @@
+export { InventoryHistoryPage } from './ui/InventoryHistoryPage'

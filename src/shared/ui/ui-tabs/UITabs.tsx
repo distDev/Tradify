@@ -3,26 +3,27 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/shared/ui/shadcn/tab
 interface Tab {
   value: string
   label: string
-  content: React.ReactNode
+  content?: React.ReactNode
 }
 
 interface UITabsProps {
   tabs: Tab[]
   defaultValue?: string
   className?: string
+  onTabChange?: (value: string) => void
 }
 
-export function UITabs({ tabs, defaultValue, className }: UITabsProps) {
+export function UITabs({ tabs, defaultValue, className, onTabChange }: UITabsProps) {
   return (
     <Tabs defaultValue={defaultValue ?? tabs[0]?.value} className={className}>
       <TabsList>
         {tabs.map(tab => (
-          <TabsTrigger key={tab.value} value={tab.value}>{tab.label}</TabsTrigger>
+          <TabsTrigger key={tab.value} value={tab.value} onClick={() => onTabChange?.(tab.value)}>{tab.label}</TabsTrigger>
         ))}
       </TabsList>
 
       {tabs.map(tab => (
-        <TabsContent key={tab.value} value={tab.value}>{tab.content}</TabsContent>
+        tab.content ? <TabsContent key={tab.value} value={tab.value}>{tab.content}</TabsContent> : undefined
       ))}
     </Tabs>
   )
